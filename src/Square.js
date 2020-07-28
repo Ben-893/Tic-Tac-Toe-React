@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { useState } from "react";
 
-class Square extends React.Component {
-  render() {
-    return (
-      <button className="square">
-        {/* TODO */}
-      </button>
-    );
-  }
-}
+const Square = ({ num }) => {
+  const [value, setValue] = useState(num);
+
+  return (
+    <button className="square" onClick={() => setValue("X")}>
+      {value}
+    </button>
+  );
+};
 
 export default Square;
